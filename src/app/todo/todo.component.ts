@@ -5,11 +5,23 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.css']
 })
-export class TodoComponent implements OnInit {
+export class TodoComponent{
+title="todo";
+list:any[]=[];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  addTask(item:string)
+  {
+    this.list.push({id:this.list.length,name:item})
+    console.warn(this.list);
+  }
+  addJob(job:string)
+  {
+    this.list.push({id:this.list.length,name:job})
+    console.warn(this.list);
+  }
+  removeTask(id:number){
+    console.warn(id)
+    this.list=this.list.filter(item=>item.id!==id);
   }
 
 }

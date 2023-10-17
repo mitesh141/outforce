@@ -1,36 +1,37 @@
-<div class="overflow-x-auto">
+<div class="form-control w-full max-w-xs mt-10">
+    <label class="label">
+      <span class="label-text">Name/Job/Date</span>
+      <span class="label-text-alt"></span>
+    </label>
+    <input type="text" placeholder="Name/Job/Date" class="input input-bordered w-full max-w-xs" #task />
+    
+    <label class="label">
+      <span class="label-text-alt">complete/gay</span>
+      <span class="label-text-alt"></span>
+    </label>
+  </div>
+  <button (click)="addTask(task.value)" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg p-1">Submit</button>
+  
+<div class="overflow-x-auto mt-10">
     <table class="table">
       <!-- head -->
       <thead>
         <tr>
-          <th></th>
-          <th>Name</th>
-          <th>Job</th>
-          <th>Favorite Color</th>
+          
+          <th>Name/Job/Date</th>
+          
+          
         </tr>
       </thead>
-      <tbody>
+      <tbody *ngFor="let item of list">
         <!-- row 1 -->
         <tr>
-          <th>1</th>
-          <td>Cy Ganderton</td>
-          <td>Quality Control Specialist</td>
-          <td>Blue</td>
+          
+          <td>{{item.name}} <button (click)="removeTask(item.id)" class="btn btn-sm">Done</button></td>
+          
+          
         </tr>
-        <!-- row 2 -->
-        <tr>
-          <th>2</th>
-          <td>Hart Hagerty</td>
-          <td>Desktop Support Technician</td>
-          <td>Purple</td>
-        </tr>
-        <!-- row 3 -->
-        <tr>
-          <th>3</th>
-          <td>Brice Swyre</td>
-          <td>Tax Accountant</td>
-          <td>Red</td>
-        </tr>
+
       </tbody>
     </table>
   </div>
