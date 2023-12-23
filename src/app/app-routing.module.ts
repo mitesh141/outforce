@@ -6,7 +6,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 const routes: Routes = [
   {
     component:TodoComponent,
-    path:'todo'
+    path:'Todo'
   },
   {
     component:LandingPageComponent,
