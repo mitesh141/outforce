@@ -11,7 +11,7 @@ export class LandingPageComponent implements OnInit {
 
   constructor() {
     // Set the date we're counting down to
-    this.countDownDate = new Date("Dec 31, 2023 15:37:25").getTime();
+    this.countDownDate = new Date("Jan 1, 2024 15:37:25").getTime();
     this.countdownText = '';
 
     this.updateCountdown(); // Call the function immediately to avoid initial delay
